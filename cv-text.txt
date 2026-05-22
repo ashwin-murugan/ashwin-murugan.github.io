@@ -1,0 +1,137 @@
+Ashwin Subramanian Murugan
+Email: ae22b001@smail.iitm.ac.in | Phone: +91 6382074424
+EDUCATION
+Indian Institute of Technology (IIT), Madras Expected June 2026
+B.Tech in Aerospace Engineering CGPA: 9.92/10
+Department Rank: 1/75
+TEST SCORES
+• Secured All India Rank 156 in JEE Advanced 2022 out of 150K+ candidates Aug 2022
+• Secured All India Rank 122 in JEE Mains 2022 out of 1M+ candidates Jul 2022
+• Secured All India Rank 239 in Kishore Vaigyanik Protsahan Yojana (KVPY SX) 2021 and awarded Jan 2021
+the KVPY Fellowship by Department of Science and Technology, Govt. of India
+HONOURS AND AWARDS
+• Awarded Sri S Subramanian Prize for securing the highest CGPA among 1500+ students in the Apr 2024
+first year of the B.Tech program at IIT Madras
+• Awarded Prof T K Varadan Prize for achieving the best academic performance in the second year Apr 2025
+of the B.Tech Aerospace Engineering program at IIT Madras
+• Secured Runner-Up in the James Dyson Award 2024 at the National level for developing Sept 2024
+HydroChurn - a portable, self-sustaining water bottle
+• Received the United Nations Millennium Fellowship 2025 to further develop HydroChurn Aug 2025
+• Secured First Runner-Up in the Airbus Flight Challenge 2024 at Shaastra, IIT Madras for Jan 2024
+developing a model to predict the dynamic effects of sudden braking on an airplane
+• Received the Indian Academy of Sciences Summer Research Fellowship 2024 for a fully funded May 2024
+summer research internship at IISC Bangalore
+PUBLICATIONS
+Ashwin Subramanian Murugan, T. M. Muruganandam. “Shock Train Stability in Scramjet Isolators under Back-
+Pressure Fluctuations.” Manuscript in preparation for submission to the Journal of Fluid Mechanics, December 2025.
+J. Hwang, Ashwin Subramanian Murugan, Q. Ang´eloz. “Characterization of Helmholtz Resonators for Acoustic
+Force Generation and Microflight.” Manuscript in preparation for submission to Science Advances, December 2025.
+RESEARCH AND INDUSTRY EXPERIENCE
+´	Ecole Polytechnique F´ed´erale de Lausanne (EPFL) May 2025 – Jul 2025
+Project: Development of Acoustically Actuated Microflyers Lausanne, Switzerland
+Advisor: Prof. Selman Sakar
+• Designed and analyzed one of the smallest artificial flying robots, a millimetre-scale acoustically actuated microflyer
+using Helmholtz resonators for controlled flight as a part of the E3 Summer Research Program (2% acceptance
+rate)
+• Fabricated microflyers with integrated propellers and resonators using a Nanoscribe 2-photon polymerization system
+• Performed experiments with a 40 kHz transducer array, demonstrating lift generation and controllable flight using
+acoustic power
+Indian Institute of Technology Madras Jul 2023 – Present
+Project: Effects of Back Pressure Fluctuation on Pseudo-Shock Waves in a Scramjet Isolator Chennai, India
+Advisor: Prof. T M Muruganandam
+
+-- 1 of 3 --
+
+• Investigating the effect of back pressure fluctuations on shock train stability within a scramjet isolator across
+varying flow conditions
+• Performing high-fidelity Large Eddy Simulations (LES) using OpenSBLI to resolve unsteady shock-boundary layer
+interactions and pressure wave dynamics
+• Working on determining isolator design criteria to prevent unstart under fluctuating back-pressure conditions
+Agnikul Cosmos Nov 2024 – Jan 2025
+Propulsion Engineering Intern Chennai, India
+Agnikul Cosmos is an IIT Madras-based aerospace startup creating 3D-printed, semi-cryogenic launch vehicles for
+affordable small satellite launches
+• Modeled and analyzed the LOX subcooling, pumping, and filling systems for the booster stage testing facility
+using AFT Fathom, determining flow rates, pressure distributions, and valve operation parameters
+• Simulated transient thermal behaviour of the LOX system using NASA’s GFSSP to evaluate critical parameters
+related to the liquid nitrogen subcooling system, the liquid oxygen reservoir, and the booster stage filling system
+• Analyzed heat transfer and thermal stratification in the booster stage propellant tanks to determine propellant
+requirements
+Indian Institute of Science Bangalore May 2024 – Jul 2024
+Project: Numerical and Experimental Study on Shock Wave Pulsations over Spiked Cylinder Bangalore, India
+Advisor: Prof. Duvvuri Subrahmanyam
+• Conducted experiments in the Roddam Narasimha Hypersonic Wind Tunnel (RNHWT) to investigate
+shock wave pulsations at Mach 6
+• Performed hypersonic flow simulations using Ansys Fluent to analyze the dynamics of shock wave pulsations over
+a spiked cylinder and validated it using experimental data
+• Performed a literature review to understand the driving mechanisms of shock wave pulsations
+Indian Institute of Technology Madras Jul 2025 – Present
+Project: Deposition and Erosion in Solid Rocket Motor Nozzles Chennai, India
+Advisor: Prof. P. A. Ramakrishnna
+• Performing multiphase CFD simulations of solid rocket motor (SRM) nozzles to analyze particle-induced erosion
+and deposition mechanisms using empirical modeling approaches
+• Carrying out full-scale SRM firing experiments to provide quantitative benchmarks for erosion and deposition
+model validation
+TECHNICAL PROJECTS
+Course Project - Data-Driven Modeling of Aerospace Systems Jul 2025 – Nov 2025
+IIT Madras Chennai, India
+• Developed a Fourier Neural Operator-based model for the prediction of transient flows over parameterized elliptical
+geometries
+• Designed a Reduced Order Model-based controller for morphing-airfoil actuation, enabling constant-lift performance
+under highly turbulent flow conditions
+Student Unmanned Aerial Systems Competition (SUAS) 2025 Nov 2024 – Present
+Team Advisor: Prof. Satadal Ghosh, IIT Madras Chennai, India
+• Part of a 15-member team developing an autonomous quadcopter UAV for SUAS 2025, focusing on autonomous
+flight, real-time obstacle avoidance, object detection, and precision payload delivery
+• Implemented computer vision algorithms to detect, classify, and geolocate ground markers from altitudes of up to
+75 feet, utilizing synthetic datasets generated in Blender
+• Executed autonomous mission laps at SUAS 2025, integrating waypoint navigation, real-time object detection, and
+autonomous mapping of specified mission areas
+
+-- 2 of 3 --
+
+• Currently collaborating with commercial partners to adapt and deploy this technology for domain-specific appli-
+cations
+AstroSim May 2023 – Mar 2024
+Physics and Astronomy Club, Centre for Innovation (CFI), IIT Madras Chennai, India
+• Developed a C++ program to numerically solve the N-body problem, investigating complex system behaviours and
+stellar dynamics
+• Applied advanced numerical methods and optimization techniques, including the Barnes-Hut Octree algorithm,
+3-D inelastic collisions, and parallel processing, achieving an 8x performance improvement
+• Simulated the Andromeda - Milky Way collision with over 100K+ objects, demonstrating the scalability of the
+system for large-scale astrophysical simulations
+Link: Github Repository
+TECHNICAL SKILLS AND COURSEWORK
+Programming and Software : Python, MATLAB, C++, Ansys Fluent, LATEX, Solidworks, Comsol,
+AFT Fathom, NASA’s GFSSP, AutoCAD, Fusion 360
+General Purpose Tools : Microsoft Office, Blender, Canva, Adobe Illustrator
+Coursework : · Rocket Propulsion, Gas Turbines, Aerodynamics, Gas Dynamics, Vibrations,
+Fluid Mechanics, Thermodynamics, Flight Dynamics, Gas Dynamics Lab,
+Aerospace Structural Mechanics
+· Computational Fluid Dynamics, Scientific Computing
+· Linear Algebra, Multivariable Calculus, Complex Analysis
+· Econometrics, Principles of Economics, Basic Electrical Engineering
+CO-CURRICULAR ACTIVITIES
+Coordinator May 2023 – Jan 2024
+Coding and Logic Vertical, Shaastra, IIT Madras
+• Coordinated a nationwide competitive programming contest for college students, managing both the preliminary
+and final rounds to test advanced programming and analytical skills
+• Developed and curated challenging programming problems for IIT Madras’ first rated CodeChef contest, attracting
+over 25K+ participants worldwide, and coordinated the finals held at IIT Madras
+Freshman Mentor Jul 2024 – Apr 2025
+Saathi – Student Wellness Cell, IIT Madras
+• Mentored four first-year students by providing guidance on academic and personal development, supporting their
+transition to college, and assisting with coursework and campus resources
+EXTRA-CURRICULAR ACTIVITIES
+Astronomy Enthusiast
+• Was a member of St. John’s Public School’s Astronomy Club, where I participated in hands-on STEM activities
+and presented weekly updates on space science
+• Conducted night-sky observations using telescopes, including planetary imaging, as part of Horizon - the Physics
+and Astronomy Club at IIT Madras
+Keyboardist and Violinist
+• Completed Trinity Grade 2 in Keyboard and Grade 2 in Music Theory
+• Amateur violinist specializing in Indian classical music
+• Was a member of the school choir and performed multiple times in the school assembly and Annual Day
+
+-- 3 of 3 --
+

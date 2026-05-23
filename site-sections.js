@@ -113,7 +113,7 @@ function Research({ headless = false }) {
             </div>
             <div className="research-meta">
               <div>{it.year}</div>
-              <a className="accent link-arrow" href="#">→ READ DRAFT</a>
+              <span className="accent link-arrow">DRAFT IN PREP</span>
             </div>
           </article>
         ))}
@@ -179,7 +179,7 @@ function Projects({ headless = false }) {
             <p className="proj-blurb">{p.blurb}</p>
             <div className="proj-foot">
               <span>[ photos + writeup soon ]</span>
-              <a className="accent link-arrow" href="#">→ TRACK</a>
+              <span className="accent link-arrow">IN PROGRESS</span>
             </div>
           </article>
         ))}
@@ -284,7 +284,7 @@ function Writing({ headless = false }) {
             <SectionTitle>
               From the <em className="accent">logbook.</em>
             </SectionTitle>
-            <a className="meta accent" href="#">→ ALL ENTRIES</a>
+            <span className="meta accent">ALL ENTRIES</span>
           </div>
         </>
       )}
@@ -305,11 +305,11 @@ function Writing({ headless = false }) {
 function Contact({ headless = false }) {
   const channels = [
     ['EMAIL', 'ashwinsm [at] mit.edu', 'mailto:ashwinsm@mit.edu'],
-    ['SCHOLAR', '↗ scholar profile', '#'],
-    ['GITHUB', '↗ /ashwinsm', '#'],
-    ['LINKEDIN', '↗ /in/ashwin-murugan', '#'],
-    ['TWITTER', '↗ @ashwinflies', '#'],
-    ['CV', '↗ download pdf', '#'],
+    ['SCHOLAR', 'scholar profile', null],
+    ['GITHUB', '↗ /Ashwin2174', 'https://github.com/Ashwin2174'],
+    ['LINKEDIN', '↗ /in/ashwin-murugan', 'https://www.linkedin.com/in/ashwin-murugan'],
+    ['TWITTER', '↗ @ashwinflies', 'https://x.com/ashwinflies'],
+    ['CV', '↗ download pdf', 'uploads/Ashwin_Research_CV.pdf'],
   ];
   return (
     <section id="contact" className="sect sect-bg contact-sect fade-in">
@@ -327,12 +327,23 @@ function Contact({ headless = false }) {
           </>
         )}
         <div className="contact-grid">
-          {channels.map(([k, v, href]) => (
-            <a key={k} className="contact-cell hover-row" href={href}>
-              <div className="contact-key accent">{k}</div>
-              <div className="contact-val">{v}</div>
-            </a>
-          ))}
+          {channels.map(([k, v, href]) => {
+            const content = (
+              <>
+                <div className="contact-key accent">{k}</div>
+                <div className="contact-val">{v}</div>
+              </>
+            );
+            return href ? (
+              <a key={k} className="contact-cell hover-row" href={href}>
+                {content}
+              </a>
+            ) : (
+              <div key={k} className="contact-cell hover-row">
+                {content}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

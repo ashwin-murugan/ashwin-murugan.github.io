@@ -98,7 +98,7 @@ function useReveal() {
 
 // ─── nav (page-based) ────────────────────────────────────────────────────────
 const NAV_ITEMS = [
-  ['Personal Website.html', 'Home',       'home'],
+  ['index.html',            'Home',       'home'],
   ['about.html',            'About',      'about'],
   ['research.html',         'Research',   'research'],
   ['projects.html',         'Projects',   'projects'],
@@ -119,7 +119,7 @@ function SiteNav({ active }) {
   return (
     <nav className={`site-nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
-        <a className="nav-brand" href="Personal Website.html">
+        <a className="nav-brand" href="index.html">
           <span className="nav-brand-mark">a</span>
           <span className="nav-brand-text">
             <strong>ASHWIN · MURUGAN</strong>
@@ -150,7 +150,7 @@ function SubpageHero({ index, eyebrow, title, subtitle, meta }) {
         <Starfield width={1600} height={360} density={0.7} seed={42} parallaxX={0} parallaxY={0} />
       </div>
       <div className="subhero-inner">
-        <a href="Personal Website.html" className="subhero-back">
+        <a href="index.html" className="subhero-back">
           ← Back to Star Chart
         </a>
         <div className="subhero-kicker accent">★ FIELD {index} · {eyebrow}</div>

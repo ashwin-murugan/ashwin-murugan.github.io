@@ -43,7 +43,7 @@ function About() {
           <div className="now-row">→ First year PhD · MIT AeroAstro</div>
           <div className="now-row">→ Shock-train manuscript in prep for JFM</div>
           <div className="now-row">→ Re-reading Anderson's <em>Hypersonics</em></div>
-          <div className="now-head accent">☉ ALWAYS THINKING ABOUT</div>
+          <div className="now-head accent" style={{ marginTop: '1.2em' }}>☉ ALWAYS THINKING ABOUT</div>
           <div className="now-row">→ Why scramjets unstart</div>
           <div className="now-row">→ Acoustic levitation</div>
           <div className="now-row">→ Whether we can fly things on Titan</div>

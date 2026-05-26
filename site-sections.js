@@ -24,7 +24,7 @@ function About() {
             <p>
               I'm a first-year PhD student at MIT, working with{' '}
               <span className="accent">Prof. Hamsa Balakrishnan</span> in the DINaMo Group on the NDSEG Fellowship. Before that I
-              finished my B.Tech in Aerospace Engineering at IIT Madras — first in the department (CGPA 9.88/10) —
+              finished my B.Tech in Aerospace Engineering at IIT Madras — first in the department —
               with detours through hypersonic wind tunnels in Bangalore, microflyer fabrication at
               EPFL, and a propulsion stint at Agnikul Cosmos.
             </p>

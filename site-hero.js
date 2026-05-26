@@ -213,8 +213,8 @@ function Hero({ density, variant, shootingStars, onJump }) {
 
       {/* coordinates ticker */}
       <div className="hero-ticker">
-        <span>RA 14h 39m · DEC −60° 50′</span>
-        <span>FIELD NO. 001 — INTRODUCTION</span>
+        <span>LAT 42°21′N · LON 71°06′W</span>
+        <span>MIT · CAMBRIDGE, MA</span>
         <span>EPOCH J2026.4</span>
       </div>
 
@@ -231,7 +231,7 @@ function HeroContentTypographic({ onJump }) {
   return (
     <div className="hero-content typographic">
       <div className="hero-left fade-in">
-        <div className="kicker accent">★ MAGNITUDE 1 · MIT DINAMO GROUP · NDSEG FELLOW '26</div>
+        <div className="kicker accent">★ MIT AEROASTRO · DINAMO GROUP · NDSEG FELLOW '26</div>
         <h1 className="hero-name">
           Ashwin
           <br />
@@ -253,7 +253,7 @@ function HeroContentConstellation({ onJump }) {
   return (
     <div className="hero-content constellation">
       <div className="kicker accent" style={{ textAlign: 'center', marginBottom: 24 }}>
-        ★ MAGNITUDE 1 · MIT DINAMO GROUP · NDSEG FELLOW '26
+        ★ MIT AEROASTRO · DINAMO GROUP · NDSEG FELLOW '26
       </div>
       <h1 className="hero-name centered">
         Ashwin <em className="accent">Murugan</em>

@@ -191,7 +191,7 @@ function Hero({ density, variant, shootingStars, onJump }) {
     };
   }, []);
 
-  const heroHeight = window.innerHeight;
+  const heroHeight = Math.round(window.innerHeight * 1.3);
 
   return (
     <section ref={heroRef} className="hero" style={{ height: heroHeight }}>

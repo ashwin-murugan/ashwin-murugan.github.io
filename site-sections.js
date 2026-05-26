@@ -14,23 +14,17 @@ function SectionTitle({ children }) {
   return <h2 className="section-title">{children}</h2>;
 }
 
-function About({ headless = false }) {
+function About() {
   return (
     <section id="about" className="sect sect-bg fade-in">
-      {!headless && <SectionLabel index="01" label="Field I · About" />}
+      <SectionLabel index="01" label="Field I · About" />
       <div className="about-grid">
         <div>
-          {!headless && (
-            <h2 className="huge">
-              I grew up squinting at rockets and never quite{' '}
-              <em className="accent">stopped looking up.</em>
-            </h2>
-          )}
           <div className="prose">
             <p>
-              I'm a first-year PhD student at MIT, joining the{' '}
-              <span className="accent">DINAMO Lab</span> on the NDSEG Fellowship. Before that I
-              finished my B.Tech in Aerospace Engineering at IIT Madras — first in the department —
+              I'm a first-year PhD student at MIT, working with{' '}
+              <span className="accent">Prof. Hamsa Balakrishnan</span> in the DINaMo Group on the NDSEG Fellowship. Before that I
+              finished my B.Tech in Aerospace Engineering at IIT Madras — first in the department (CGPA 9.88/10) —
               with detours through hypersonic wind tunnels in Bangalore, microflyer fabrication at
               EPFL, and a propulsion stint at Agnikul Cosmos.
             </p>
@@ -46,8 +40,8 @@ function About({ headless = false }) {
         <aside className="now-card">
           <div className="now-head accent">☉ CURRENTLY</div>
           <div className="now-row">→ Cambridge, MA</div>
-          <div className="now-row">→ Starting PhD · MIT AeroAstro</div>
-          <div className="now-row">→ Wrapping a manuscript on shock-train stability</div>
+          <div className="now-row">→ First year PhD · MIT AeroAstro</div>
+          <div className="now-row">→ Shock-train manuscript in prep for JFM</div>
           <div className="now-row">→ Re-reading Anderson's <em>Hypersonics</em></div>
           <div className="now-head accent">☉ ALWAYS THINKING ABOUT</div>
           <div className="now-row">→ Why scramjets unstart</div>
@@ -63,28 +57,31 @@ function About({ headless = false }) {
 function Research({ headless = false }) {
   const items = [
     {
+      tag: 'UNDER REVIEW · SCI. ADV.',
+      title: 'Acoustic Resonators as Wireless Actuators in Air for Small-Scale Robots',
+      authors: 'J. Hwang, Q. Angéloz, A. S. Murugan, H. Lissek, M. S. Sakar',
+      blurb:
+        'One of the smallest artificial flying robots ever built — a millimetre-scale acoustically actuated microflyer using Helmholtz resonators, fabricated with two-photon polymerization at EPFL.',
+      year: '2026',
+      status: 'UNDER REVIEW',
+    },
+    {
       tag: 'IN PREP · JFM',
       title: 'Shock Train Stability in Scramjet Isolators under Back-Pressure Fluctuations',
       authors: 'A. S. Murugan, T. M. Muruganandam',
       blurb:
         'Using LES with OpenSBLI to resolve unsteady shock-boundary layer coupling, then deriving an isolator design criterion that keeps the engine from unstarting when the combustor talks back.',
-      year: '2025',
+      year: '2026',
+      status: 'IN PREP',
     },
     {
-      tag: 'IN PREP · SCI. ADV.',
-      title: 'Characterization of Helmholtz Resonators for Acoustic Force Generation and Microflight',
-      authors: 'J. Hwang, A. S. Murugan, Q. Angéloz',
+      tag: 'POSTER · HEMCE 2026',
+      title: 'Numerical Investigation of Alumina-Induced Erosion and Slag Deposition in Solid Rocket Motors',
+      authors: 'A. S. Murugan, N. Srivastava, P. A. Ramakrishna',
       blurb:
-        'One of the smallest artificial flyers ever built — a millimetre-scale resonator lifted by a 40 kHz transducer array. Fabricated with two-photon polymerization at EPFL.',
-      year: '2025',
-    },
-    {
-      tag: 'ONGOING · IIT MADRAS',
-      title: 'Particle-Induced Erosion in Solid Rocket Motor Nozzles',
-      authors: 'with Prof. P. A. Ramakrishna',
-      blurb:
-        'Multiphase CFD of SRM exhaust against full-scale firing data — building empirical deposition / erosion models that hold up at the throat.',
-      year: '2025–',
+        'Multiphase CFD of SRM nozzles using a Eulerian–Eulerian approach — building empirical deposition and erosion models validated against full-scale firing data.',
+      year: '2026',
+      status: 'PRESENTED',
     },
   ];
   return (
@@ -113,7 +110,7 @@ function Research({ headless = false }) {
             </div>
             <div className="research-meta">
               <div>{it.year}</div>
-              <span className="accent link-arrow">DRAFT IN PREP</span>
+              <span className="accent link-arrow">{it.status}</span>
             </div>
           </article>
         ))}
@@ -152,6 +149,13 @@ function Projects({ headless = false }) {
         'Fourier neural operator for transient flow over parameterized elliptical bodies + an ROM-based morphing-airfoil controller for constant-lift in turbulence.',
       points: [[30, 60], [80, 130], [140, 100], [200, 60], [220, 150]],
     },
+    {
+      label: 'DNS Solver',
+      tag: 'CFD · C++',
+      blurb:
+        '3D compressible curvilinear finite-difference DNS solver for high-fidelity flow simulation — Navier–Stokes on curvilinear grids, validated on canonical benchmarks.',
+      points: [[50, 20], [100, 50], [160, 30], [200, 80], [130, 120], [60, 140]],
+    },
   ];
   return (
     <section id="projects" className="sect sect-bg2 fade-in">
@@ -188,29 +192,33 @@ function Projects({ headless = false }) {
   );
 }
 
-function Experience({ headless = false }) {
-  const xp = [
-    ['2026 —', 'MIT AeroAstro · DINAMO Lab', 'PhD student · NDSEG Fellow', 'Cambridge, MA'],
-    ['2025', 'EPFL', 'E3 Summer Research — acoustic microflyers (Prof. Sakar)', 'Lausanne'],
-    ['2024–25', 'Agnikul Cosmos', 'Propulsion Intern — LOX sub-cooling for booster testing', 'Chennai'],
-    ['2024', 'IISc Bangalore', 'Hypersonic shock pulsations · Mach 6 RNHWT (Prof. Duvvuri)', 'Bangalore'],
-    ['2023 — 2026', 'IIT Madras', 'B.Tech Aerospace · Dept. Rank 1/75 · CGPA 9.92', 'Chennai'],
-    ['2023 — 2024', 'Shaastra Coding Vertical', 'Coordinator — 25K+ participants', 'IIT Madras'],
+function Awards({ headless = false }) {
+  const awards = [
+    ['2026', 'NDSEG Fellowship', 'DoD graduate research fellowship', 'USA'],
+    ['2026', 'Prof E G Tulapurkara Prize', 'Best academic performance · third year aerospace', 'IIT Madras'],
+    ['2026', 'Jane Street Poker Bots · 3rd Place', 'IIT Madras–Jane Street competition', 'Chennai'],
+    ['2025', 'UN Millennium Fellowship', 'HydroChurn sustainability work', 'Global'],
+    ['2025', 'Prof T K Varadan Prize', 'Best aerospace second-year student', 'IIT Madras'],
+    ['2024', 'Sri S Subramanian Prize', 'Top of class of 1500+', 'IIT Madras'],
+    ['2024', 'James Dyson Award · Runner-Up', 'India national recognition for HydroChurn', 'India'],
+    ['2024', 'Airbus Flight Challenge · 1st RU', 'Shaastra IIT Madras competition', 'Chennai'],
+    ['2024', 'IAS Summer Research Fellowship', 'Summer research fellowship at IISc', 'Bangalore'],
+    ['2021', 'KVPY Fellowship', 'DST, Government of India · AIR 239', 'India'],
   ];
   return (
-    <section id="experience" className="sect sect-bg fade-in">
+    <section id="awards" className="sect sect-bg fade-in">
       {!headless && (
         <>
-          <SectionLabel index="04" label="Field IV · Trajectory" />
+          <SectionLabel index="04" label="Field IV · Honours" />
           <SectionTitle>
-            The <em className="accent">orbit</em> so far.
+            Hardware on <em className="accent">the shelf.</em>
           </SectionTitle>
         </>
       )}
-      <div className="xp-wrap">
+      <div className="xp-wrap awards-timeline">
         <div className="xp-line" />
-        {xp.map((row, i) => (
-          <div key={i} className="xp-row">
+        {awards.map((row, i) => (
+          <div key={i} className="xp-row award-row">
             <div className="xp-dot" />
             <div className="xp-date">{row[0]}</div>
             <div>
@@ -225,91 +233,14 @@ function Experience({ headless = false }) {
   );
 }
 
-function Awards({ headless = false }) {
-  const awards = [
-    ['NDSEG Fellowship', '2026 · DoD'],
-    ['Sri S Subramanian Prize', '2024 · top of class of 1500+'],
-    ['Prof T K Varadan Prize', '2025 · best aerospace 2nd year'],
-    ['UN Millennium Fellowship', '2025 · HydroChurn'],
-    ['James Dyson Award · Runner-Up', '2024 · India National'],
-    ['Airbus Flight Challenge · 1st RU', '2024 · Shaastra IITM'],
-    ['IAS Summer Research Fellowship', '2024 · IISc'],
-    ['KVPY Fellowship', '2021 · DST, GoI · AIR 239'],
-  ];
-  return (
-    <section id="awards" className="sect sect-bg fade-in">
-      {!headless && <SectionLabel index="05" label="Field V · Honours" />}
-      <div className="awards-grid">
-        {awards.map(([name, sub], i) => (
-          <div key={i} className="award hover-card">
-            <div className="award-badge accent">★</div>
-            <div>
-              <div className="award-name">{name}</div>
-              <div className="award-sub">{sub}</div>
-            </div>
-            <div className="award-num">0{i + 1}</div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function Writing({ headless = false }) {
-  const posts = [
-    {
-      title: 'Why scramjets unstart, and what an isolator is really doing',
-      meta: '12 min read · in draft',
-      blurb:
-        "A walking tour of pseudo-shock systems for people who don't already love them. Lots of pictures of pressure traces.",
-    },
-    {
-      title: 'On flying things that weigh less than a grain of rice',
-      meta: '8 min read · coming soon',
-      blurb:
-        'Fabricating millimetre-scale flyers on a two-photon polymerization printer, and what changes when your propeller is shorter than your eyelash.',
-    },
-    {
-      title: 'Notes from re-reading Anderson, ten years later',
-      meta: '5 min read · draft',
-      blurb: 'Hypersonic and high-temperature gas dynamics, but as a series of journal entries.',
-    },
-  ];
-  return (
-    <section id="writing" className="sect sect-bg2 fade-in">
-      {!headless && (
-        <>
-          <SectionLabel index="06" label="Field VI · Writing" />
-          <div className="title-row">
-            <SectionTitle>
-              From the <em className="accent">logbook.</em>
-            </SectionTitle>
-            <span className="meta accent">ALL ENTRIES</span>
-          </div>
-        </>
-      )}
-      <div className="writing-grid">
-        {posts.map((p, i) => (
-          <article key={i} className="post hover-card">
-            <div className="kicker accent">★ ENTRY 0{i + 1}</div>
-            <h3 className="post-title">{p.title}</h3>
-            <div className="post-meta">{p.meta}</div>
-            <p className="post-blurb">{p.blurb}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 function Contact({ headless = false }) {
   const channels = [
-    ['EMAIL', 'ashwinsm [at] mit.edu', 'mailto:ashwinsm@mit.edu'],
+    ['EMAIL', 'ashwinm [at] mit.edu', 'mailto:ashwinm@mit.edu'],
     ['SCHOLAR', 'scholar profile', null],
-    ['GITHUB', '↗ /Ashwin2174', 'https://github.com/Ashwin2174'],
+    ['GITHUB', '↗ /ashwin-murugan', 'https://github.com/ashwin-murugan'],
     ['LINKEDIN', '↗ /in/ashwin-murugan', 'https://www.linkedin.com/in/ashwin-murugan'],
     ['TWITTER', '↗ @ashwinflies', 'https://x.com/ashwinflies'],
-    ['CV', '↗ download pdf', 'uploads/Ashwin_Research_CV.pdf'],
+    ['CV', '↗ download pdf', 'uploads/Ashwin___Research_CV___MIT.pdf'],
   ];
   return (
     <section id="contact" className="sect sect-bg contact-sect fade-in">
@@ -319,7 +250,7 @@ function Contact({ headless = false }) {
       <div className="contact-inner">
         {!headless && (
           <>
-            <SectionLabel index="07" label="Field VII · Signal" />
+            <SectionLabel index="05" label="Field V · Signal" />
             <h2 className="hero-name hero-name-contact">
               Say <em className="accent">hello</em>
               <br />— or send me a paper to read.
@@ -350,4 +281,49 @@ function Contact({ headless = false }) {
   );
 }
 
-Object.assign(window, { About, Research, Projects, Experience, Awards, Writing, Contact });
+function CV() {
+  const pdf = 'uploads/Ashwin___Research_CV___MIT.pdf';
+  const containerRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const container = containerRef.current;
+    if (!container || !window.pdfjsLib) return;
+
+    window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+      'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+    window.pdfjsLib.getDocument(pdf).promise.then(doc => {
+      container.innerHTML = '';
+      const renderPage = (n) => {
+        if (n > doc.numPages) return;
+        doc.getPage(n).then(page => {
+          const vp = page.getViewport({ scale: 1.8 });
+          const canvas = document.createElement('canvas');
+          canvas.width = vp.width;
+          canvas.height = vp.height;
+          canvas.style.cssText = 'width:100%;display:block;margin-bottom:6px;border-radius:4px;';
+          container.appendChild(canvas);
+          page.render({ canvasContext: canvas.getContext('2d'), viewport: vp }).promise.then(
+            () => renderPage(n + 1)
+          );
+        });
+      };
+      renderPage(1);
+    });
+  }, []);
+
+  return (
+    <section id="cv" className="sect sect-bg2 fade-in">
+      <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 'var(--gap)' }}>
+        <a href={pdf} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ textDecoration: 'none' }}>
+          OPEN PDF ↗
+        </a>
+      </div>
+      <div ref={containerRef} style={{ background: '#fff', borderRadius: 6, padding: 8 }}>
+        <p style={{ textAlign: 'center', padding: 24, color: '#888' }}>Loading…</p>
+      </div>
+    </section>
+  );
+}
+
+Object.assign(window, { About, Research, Projects, Awards, Contact, CV });

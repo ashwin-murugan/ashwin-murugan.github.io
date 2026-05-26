@@ -191,7 +191,7 @@ function Hero({ density, variant, shootingStars, onJump }) {
     };
   }, []);
 
-  const heroHeight = 880;
+  const heroHeight = 720;
 
   return (
     <section ref={heroRef} className="hero" style={{ height: heroHeight }}>
@@ -231,7 +231,7 @@ function HeroContentTypographic({ onJump }) {
   return (
     <div className="hero-content typographic">
       <div className="hero-left fade-in">
-        <div className="kicker accent">★ MAGNITUDE 1 · MIT DINAMO LAB · NDSEG FELLOW '26</div>
+        <div className="kicker accent">★ MAGNITUDE 1 · MIT DINAMO GROUP · NDSEG FELLOW '26</div>
         <h1 className="hero-name">
           Ashwin
           <br />
@@ -243,12 +243,6 @@ function HeroContentTypographic({ onJump }) {
           scramjets, micron-scale flyers riding sound waves, and the propulsion machinery that
           gets things off the ground.
         </p>
-        <div className="hero-cta">
-          <button className="btn-primary" onClick={() => onJump('research')}>
-            OPEN STAR CHART →
-          </button>
-          <span className="hero-scroll-hint">or scroll for catalogue</span>
-        </div>
       </div>
       <ObservingCard />
     </div>
@@ -259,7 +253,7 @@ function HeroContentConstellation({ onJump }) {
   return (
     <div className="hero-content constellation">
       <div className="kicker accent" style={{ textAlign: 'center', marginBottom: 24 }}>
-        ★ MAGNITUDE 1 · MIT DINAMO LAB · NDSEG FELLOW '26
+        ★ MAGNITUDE 1 · MIT DINAMO GROUP · NDSEG FELLOW '26
       </div>
       <h1 className="hero-name centered">
         Ashwin <em className="accent">Murugan</em>
@@ -269,14 +263,6 @@ function HeroContentConstellation({ onJump }) {
         Aerospace researcher charting the small, fast, and unsteady — shock trains, micron-scale
         flyers riding sound waves, and the propulsion that gets things off the ground.
       </p>
-      <div className="hero-cta centered">
-        <button className="btn-primary" onClick={() => onJump('research')}>
-          OPEN STAR CHART →
-        </button>
-        <button className="btn-ghost" onClick={() => onJump('about')}>
-          ↓ SCROLL TO CATALOGUE
-        </button>
-      </div>
     </div>
   );
 }
@@ -310,7 +296,7 @@ function ObservingCard() {
         {[
           ['RANK', '1 / 75', 'Aero IITM'],
           ['JEE ADV', 'AIR 156', '150K+'],
-          ['CGPA', '9.92', '/ 10'],
+          ['CGPA', '9.88', '/ 10'],
         ].map(([k, v, sub]) => (
           <div key={k} className="stat">
             <div className="stat-key">{k}</div>

@@ -99,13 +99,11 @@ function useReveal() {
 // ─── nav (page-based) ────────────────────────────────────────────────────────
 const NAV_ITEMS = [
   ['index.html',            'Home',       'home'],
-  ['about.html',            'About',      'about'],
   ['research.html',         'Research',   'research'],
   ['projects.html',         'Projects',   'projects'],
-  ['experience.html',       'Experience', 'experience'],
   ['awards.html',           'Awards',     'awards'],
-  ['writing.html',          'Writing',    'writing'],
   ['contact.html',          'Contact',    'contact'],
+  ['uploads/Ashwin___Research_CV___MIT.pdf', 'CV', 'cv', '_blank'],
 ];
 
 function SiteNav({ active }) {
@@ -123,19 +121,19 @@ function SiteNav({ active }) {
           <span className="nav-brand-mark">a</span>
           <span className="nav-brand-text">
             <strong>ASHWIN · MURUGAN</strong>
-            <span className="nav-brand-sub">— STAR CHART</span>
+            <span className="nav-brand-sub">— CAMBRIDGE, MA</span>
           </span>
         </a>
         <div className="nav-links">
-          {NAV_ITEMS.filter((x) => x[2] !== 'home').map(([href, label, id]) => (
-            <a key={id} href={href} className={`nav-link ${active === id ? 'active' : ''}`}>
+          {NAV_ITEMS.map(([href, label, id, target]) => (
+            <a key={id} href={href} className={`nav-link ${active === id ? 'active' : ''}`} target={target} rel={target ? 'noopener noreferrer' : undefined}>
               {label}
             </a>
           ))}
         </div>
         <div className="nav-status">
           <span className="nav-dot" />
-          <span>OBSERVING · MIT '30</span>
+          <span>OBSERVING · MIT '31</span>
         </div>
       </div>
     </nav>
@@ -151,7 +149,7 @@ function SubpageHero({ index, eyebrow, title, subtitle, meta }) {
       </div>
       <div className="subhero-inner">
         <a href="index.html" className="subhero-back">
-          ← Back to Star Chart
+          ← Back to home
         </a>
         <div className="subhero-kicker accent">★ FIELD {index} · {eyebrow}</div>
         <h1 className="subhero-title">
@@ -241,14 +239,6 @@ function ShellTweaks({ t, setTweak }) {
 // ─── home "catalogue" grid (replaces inline sections) ───────────────────────
 const CATALOGUE = [
   {
-    href: 'about.html',
-    num: 'I',
-    eyebrow: 'About',
-    title: 'About me',
-    teaser: 'A PhD student who never stopped looking up. The short version.',
-    points: [[40, 30], [110, 60], [70, 120], [180, 100], [150, 50]],
-  },
-  {
     href: 'research.html',
     num: 'II',
     eyebrow: 'Research',
@@ -265,32 +255,16 @@ const CATALOGUE = [
     points: [[60, 40], [120, 80], [60, 140], [180, 120], [200, 50]],
   },
   {
-    href: 'experience.html',
-    num: 'IV',
-    eyebrow: 'Trajectory',
-    title: 'The orbit so far',
-    teaser: 'IIT Madras → IISc → Agnikul → EPFL → MIT DINAMO.',
-    points: [[30, 60], [80, 130], [140, 100], [200, 60], [220, 150]],
-  },
-  {
     href: 'awards.html',
-    num: 'V',
+    num: 'IV',
     eyebrow: 'Honours',
     title: 'Hardware on the shelf',
     teaser: 'NDSEG, UN Millennium, James Dyson Award, Subramanian Prize, KVPY.',
     points: [[50, 40], [120, 60], [90, 130], [180, 80], [220, 140]],
   },
   {
-    href: 'writing.html',
-    num: 'VI',
-    eyebrow: 'Writing',
-    title: 'From the logbook',
-    teaser: 'Essays on propulsion, microflight, and re-reading Anderson.',
-    points: [[20, 50], [90, 90], [160, 50], [220, 110], [180, 160]],
-  },
-  {
     href: 'contact.html',
-    num: 'VII',
+    num: 'V',
     eyebrow: 'Signal',
     title: 'Say hello',
     teaser: 'Email, GitHub, Scholar, LinkedIn, X, and the CV.',
@@ -310,7 +284,7 @@ function Catalogue() {
         <h2 className="section-title">
           Pick a <em className="accent">field</em> to observe.
         </h2>
-        <div className="meta">[ 07 FIELDS ]</div>
+        <div className="meta">[ 05 FIELDS ]</div>
       </div>
       <div className="catalogue-grid">
         {CATALOGUE.map((c, i) => (
@@ -348,11 +322,11 @@ function HomeApp() {
           variant={t.hero}
           shootingStars={t.shooting}
           onJump={() => {
-            const el = document.querySelector('.catalogue-sect');
+            const el = document.getElementById('about');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
           }}
         />
-        <Catalogue />
+        <About />
       </main>
       <SiteFooter />
       <ShellTweaks t={t} setTweak={setTweak} />

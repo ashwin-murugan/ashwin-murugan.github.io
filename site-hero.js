@@ -239,9 +239,8 @@ function HeroContentTypographic({ onJump }) {
           <span className="accent">.</span>
         </h1>
         <p className="hero-tagline">
-          Aerospace researcher charting the small, fast, and unsteady — shock trains in
-          scramjets, micron-scale flyers riding sound waves, and the propulsion machinery that
-          gets things off the ground.
+          Aerospace PhD student at MIT — propulsion, autonomous flight, and the AI-driven
+          simulation tools that are starting to change how we design both.
         </p>
       </div>
       <ObservingCard />
@@ -260,8 +259,8 @@ function HeroContentConstellation({ onJump }) {
         <span className="accent">.</span>
       </h1>
       <p className="hero-tagline centered">
-        Aerospace researcher charting the small, fast, and unsteady — shock trains, micron-scale
-        flyers riding sound waves, and the propulsion that gets things off the ground.
+        Aerospace PhD student at MIT — propulsion, autonomous flight, and the AI-driven
+        simulation tools that are starting to change how we design both.
       </p>
     </div>
   );

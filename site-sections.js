@@ -23,16 +23,17 @@ function About() {
           <div className="prose">
             <p>
               I'm a first-year PhD student at MIT, working with{' '}
-              <span className="accent">Prof. Hamsa Balakrishnan</span> in the DINaMo Group on the NDSEG Fellowship. Before that I
-              finished my B.Tech in Aerospace Engineering at IIT Madras — first in the department —
-              with detours through hypersonic wind tunnels in Bangalore, microflyer fabrication at
-              EPFL, and a propulsion stint at Agnikul Cosmos.
+              <span className="accent">Prof. Hamsa Balakrishnan</span> in the DINaMo Group.
+              I was awarded the NDSEG Fellowship by the DoD for graduate studies.
+              I did my undergrad at IIT Madras — B.Tech in Aerospace Engineering, graduated first
+              in my department — with research stints in hypersonic wind tunnels in Bangalore,
+              microflyer fabrication at EPFL, and propulsion at Agnikul Cosmos.
             </p>
             <p>
-              The thread through all of it: things that move <em>fast</em>, things that move{' '}
-              <em>small</em>, and the unsteady fluid dynamics that decides whether either of those
-              things actually flies. Lately I've been curious about what neural operators and
-              reduced-order models can do for the kind of CFD I run on a daily basis.
+              Outside of research, I'm drawn to drones and autonomous flight — how they're built,
+              how they're flown, and increasingly, how they're defended against. I'm interested in
+              AI and simulation as tools for aerospace, and in the broader question of what it
+              takes to build things that actually work in the air.
             </p>
           </div>
         </div>
@@ -41,13 +42,12 @@ function About() {
           <div className="now-head accent">☉ CURRENTLY</div>
           <div className="now-row">→ Cambridge, MA</div>
           <div className="now-row">→ First year PhD · MIT AeroAstro</div>
-          <div className="now-row">→ Shock-train manuscript in prep for JFM</div>
-          <div className="now-row">→ Re-reading Anderson's <em>Hypersonics</em></div>
+          <div className="now-row">→ Writing up journal manuscripts</div>
           <div className="now-head accent" style={{ marginTop: '1.2em' }}>☉ ALWAYS THINKING ABOUT</div>
           <div className="now-row">→ Why scramjets unstart</div>
           <div className="now-row">→ Acoustic levitation</div>
           <div className="now-row">→ Whether we can fly things on Titan</div>
-          <div className="now-row">→ The right loss for a Fourier neural operator</div>
+          <div className="now-row">→ What good drone defense actually looks like</div>
         </aside>
       </div>
     </section>

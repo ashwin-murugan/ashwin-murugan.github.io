@@ -22,21 +22,23 @@ function About() {
         <div>
           <div className="prose">
             <p>
-              I'm a first-year PhD student in MIT AeroAstro, working with{' '}
-              <span className="accent">Prof. Hamsa Balakrishnan</span> in the DINaMo Group.
-              I’m supported by the 2026 NDSEG Fellowship from the U.S. Department of Defense.
-              Before MIT, I completed my B.Tech in Aerospace Engineering at IIT Madras,
-              graduating first in my department. My undergraduate research and internships took
-              me through hypersonic wind-tunnel experiments in Bangalore, acoustic microflyer
-              fabrication at EPFL, scramjet isolator simulations at IIT Madras, and propulsion
-              work at Agnikul Cosmos.
+              I'm Ashwin, a first-year graduate student in the AeroAstro department at MIT,
+              working in the DINaMo Group led by{' '}
+              <span className="accent">Prof. Hamsa Balakrishnan</span>. I’m supported by
+              the 2026 NDSEG Fellowship from the U.S. Department of Defense. Before MIT, I
+              completed my B.Tech in Aerospace Engineering at IIT Madras, graduating first in
+              my department. My undergraduate research and internships spanned hypersonic
+              wind-tunnel experiments at IISc Bangalore, acoustic microflyer fabrication at
+              EPFL, scramjet isolator simulations at IIT Madras, and propulsion systems work
+              at Agnikul Cosmos.
             </p>
             <p>
-              I’m still figuring out the exact direction of my PhD. At the moment, I’m drawn to
-              drones and autonomous flight, drone defense, AI for science, and the ways
-              increasingly capable AI systems could change engineering research. I also keep
-              coming back to simulation, real-world testing, and the gap between what works in
-              a model and what works in the air.
+              As I begin my PhD, I’m exploring the intersection of aerospace systems, autonomy,
+              and AI. I’m especially interested in drones and drone defense, AI for science and
+              engineering, and how increasingly capable AI systems could change the way we
+              design and test complex systems. Across these interests, I keep coming back to
+              simulation, real-world testing, and the gap between what works in a model and
+              what works in the air.
             </p>
           </div>
         </div>
@@ -61,29 +63,39 @@ function About() {
 function Research({ headless = false }) {
   const items = [
     {
-      tag: 'UNDER REVIEW · SCI. ADV.',
-      title: 'Acoustic Resonators as Wireless Actuators in Air for Small-Scale Robots',
-      authors: 'J. Hwang, Q. Angéloz, A. S. Murugan, H. Lissek, M. S. Sakar',
-      blurb:
-        'One of the smallest artificial flying robots ever built — a millimetre-scale acoustically actuated microflyer using Helmholtz resonators, fabricated with two-photon polymerization at EPFL.',
-      year: '2026',
-      status: 'UNDER REVIEW',
-    },
-    {
       tag: 'IN PREP · JFM',
-      title: 'Shock Train Stability in Scramjet Isolators under Back-Pressure Fluctuations',
-      authors: 'A. S. Murugan, T. M. Muruganandam',
+      title: 'Scramjet Isolator Stability',
       blurb:
-        'Using LES with OpenSBLI to resolve unsteady shock-boundary layer coupling, then deriving an isolator design criterion that keeps the engine from unstarting when the combustor talks back.',
+        'Large-eddy simulations of shock-train dynamics in scramjet isolators under fluctuating back-pressure, aimed at understanding stability limits and unstart prevention.',
+      publication:
+        'Ashwin Subramanian Murugan and T. M. Muruganandam, “Shock Train Stability in Scramjet Isolators under Back-Pressure Fluctuations.” Manuscript in preparation for JFM.',
+      image: '1 (1).png',
+      imageAlt: 'Numerical visualization of shock structures in a scramjet isolator',
+      figureClass: 'wide light',
       year: '2026',
       status: 'IN PREP',
     },
     {
-      tag: 'POSTER · HEMCE 2026',
-      title: 'Numerical Investigation of Alumina-Induced Erosion and Slag Deposition in Solid Rocket Motors',
-      authors: 'A. S. Murugan, N. Srivastava, P. A. Ramakrishna',
+      tag: 'UNDER REVIEW · SCI. ADV.',
+      title: 'Acoustically Actuated Microflyers',
       blurb:
-        'Multiphase CFD of SRM nozzles using a Eulerian–Eulerian approach — building empirical deposition and erosion models validated against full-scale firing data.',
+        'Millimetre-scale acoustically actuated microflyers based on Helmholtz resonators, combining two-photon polymerization with experiments using a 40 kHz transducer array at EPFL.',
+      publication:
+        'J. Hwang, Q. Angéloz, Ashwin Subramanian Murugan, H. Lissek, and M. S. Sakar, “Acoustic Resonators as Wireless Actuators in Air for Small-Scale Robots.” Under review at Science Advances.',
+      image: 'Screenshot 2026-05-29 003044.jpg',
+      imageAlt: 'Acoustically actuated microflyer prototype from EPFL research',
+      year: '2026',
+      status: 'UNDER REVIEW',
+    },
+    {
+      tag: 'POSTER · HEMCE 2026',
+      title: 'Erosion and Slag Deposition in Solid Rocket Motor Nozzles',
+      blurb:
+        'Eulerian-Eulerian multiphase CFD study of alumina-driven erosion and slag deposition in solid rocket motor nozzles, with wall models compared against full-scale firing data.',
+      publication:
+        'Ashwin Subramanian Murugan, N. Srivastava, and P. A. Ramakrishna, “Numerical Investigation of Alumina-Induced Erosion and Slag Deposition in Solid Rocket Motors.” Poster presented at HEMCE 2026.',
+      image: 'Picture1.png',
+      imageAlt: 'Simulation result for alumina-induced erosion and deposition in a solid rocket motor nozzle',
       year: '2026',
       status: 'PRESENTED',
     },
@@ -92,7 +104,7 @@ function Research({ headless = false }) {
     <section id="research" className="sect sect-bg fade-in">
       {!headless && (
         <>
-          <SectionLabel index="02" label="Field II · Research & Publications" />
+          <SectionLabel index="02" label="Field II · Research Work" />
           <div className="title-row">
             <SectionTitle>
               What I'm <em className="accent">looking at.</em>
@@ -106,11 +118,17 @@ function Research({ headless = false }) {
         {items.map((it, i) => (
           <article key={i} className="research-row hover-row">
             <div className="research-num">{String(i + 1).padStart(2, '0')}</div>
+            <figure className={`research-figure ${it.figureClass || ''}`}>
+              <img src={it.image} alt={it.imageAlt} />
+            </figure>
             <div className="research-body">
               <div className="kicker accent">★ {it.tag}</div>
               <h3 className="research-title">{it.title}</h3>
-              <div className="research-authors">{it.authors}</div>
               <p className="research-blurb">{it.blurb}</p>
+              <div className="research-publication">
+                <div className="research-publication-label">Publication</div>
+                <p>{it.publication}</p>
+              </div>
             </div>
             <div className="research-meta">
               <div>{it.year}</div>
@@ -129,7 +147,9 @@ function Projects({ headless = false }) {
       label: 'AstroSim',
       tag: 'Astronomy · C++',
       blurb:
-        'N-body solver simulating the Andromeda–Milky Way collision with 100K+ bodies. Barnes-Hut octree + parallelism for an 8× speed-up.',
+        'C++ N-body simulator for large-scale gravitational systems, using Barnes-Hut octrees, 3D inelastic collisions, and parallelization to simulate the Andromeda-Milky Way collision with 100K+ bodies.',
+      image: '1 (2).png',
+      imageAlt: 'AstroSim visualization of an N-body galaxy collision simulation',
       points: [[40, 30], [110, 60], [70, 120], [180, 100], [150, 50], [200, 160]],
     },
     {
@@ -141,7 +161,7 @@ function Projects({ headless = false }) {
     },
     {
       label: 'HydroChurn',
-      tag: 'Hardware · UN Millennium Fellow',
+      tag: 'Hardware · UN Fellow',
       blurb:
         'Portable, self-sustaining water bottle. Runner-up at the James Dyson Award 2024 (India). Now scaling with the UN Millennium Fellowship.',
       points: [[60, 40], [120, 80], [60, 140], [180, 120], [200, 50]],
@@ -180,13 +200,20 @@ function Projects({ headless = false }) {
                 <div className="kicker accent">★ {String(i + 1).padStart(2, '0')} · {p.tag}</div>
                 <h3 className="proj-title">{p.label}</h3>
               </div>
-              <div className="proj-constellation">
-                <Constellation w={240} h={180} points={p.points} />
-              </div>
+              {!p.image && (
+                <div className="proj-constellation">
+                  <Constellation w={240} h={180} points={p.points} />
+                </div>
+              )}
             </div>
+            {p.image && (
+              <div className="proj-media">
+                <img src={p.image} alt={p.imageAlt} />
+              </div>
+            )}
             <p className="proj-blurb">{p.blurb}</p>
             <div className="proj-foot">
-              <span>[ photos + writeup soon ]</span>
+              <span>{p.image ? '[ image available ]' : '[ writeup soon ]'}</span>
               <span className="accent link-arrow">IN PROGRESS</span>
             </div>
           </article>
@@ -240,8 +267,8 @@ function Awards({ headless = false }) {
 function Contact({ headless = false }) {
   const channels = [
     ['EMAIL', 'ashwinm [at] mit.edu', 'mailto:ashwinm@mit.edu'],
+    ['LINKEDIN', '↗ /in/ashwin-subramanian-m', 'https://www.linkedin.com/in/ashwin-subramanian-m/'],
     ['GITHUB', '↗ /ashwin-murugan', 'https://github.com/ashwin-murugan'],
-    ['LINKEDIN', '↗ /in/ashwin-murugan', 'https://www.linkedin.com/in/ashwin-murugan'],
     ['CV', '↗ download pdf', 'uploads/Ashwin___Research_CV___MIT.pdf'],
   ];
   return (

@@ -239,8 +239,8 @@ function HeroContentTypographic({ onJump }) {
           <span className="accent">.</span>
         </h1>
         <p className="hero-tagline">
-          Incoming MIT AeroAstro graduate student interested in drones, autonomous flight,
-          AI for science, and aerospace systems that have to work outside the lab.
+          Incoming MIT AeroAstro graduate student interested in drones, AI for science,
+          and simulation tools for aerospace systems that have to work outside the lab.
         </p>
       </div>
       <ObservingCard />
@@ -259,8 +259,8 @@ function HeroContentConstellation({ onJump }) {
         <span className="accent">.</span>
       </h1>
       <p className="hero-tagline centered">
-        Incoming MIT AeroAstro graduate student interested in drones, autonomous flight,
-        AI for science, and aerospace systems that have to work outside the lab.
+        Incoming MIT AeroAstro graduate student interested in drones, AI for science,
+        and simulation tools for aerospace systems that have to work outside the lab.
       </p>
     </div>
   );

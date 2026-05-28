@@ -133,7 +133,7 @@ function SiteNav({ active }) {
         </div>
         <div className="nav-status">
           <span className="nav-dot" />
-          <span>OBSERVING · MIT '31</span>
+          <span>MIT AEROASTRO</span>
         </div>
       </div>
     </nav>
@@ -167,8 +167,8 @@ function SiteFooter({ note }) {
   return (
     <footer className="site-footer">
       <span>© ASHWIN MURUGAN · 2026</span>
-      <span>★ FIELD CATALOGUE v1.0 · COMPILED MIT</span>
-      <span>{note || 'END OF CHART'}</span>
+      <span>MIT AEROASTRO · DINAMO GROUP</span>
+      <span>{note || 'ashwinm@mit.edu'}</span>
     </footer>
   );
 }

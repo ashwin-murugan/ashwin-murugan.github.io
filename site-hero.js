@@ -239,8 +239,8 @@ function HeroContentTypographic({ onJump }) {
           <span className="accent">.</span>
         </h1>
         <p className="hero-tagline">
-          Aerospace PhD student at MIT — propulsion, autonomous flight, and the AI-driven
-          simulation tools that are starting to change how we design both.
+          Incoming MIT AeroAstro graduate student interested in drones, autonomous flight,
+          AI for science, and aerospace systems that have to work outside the lab.
         </p>
       </div>
       <ObservingCard />
@@ -259,8 +259,8 @@ function HeroContentConstellation({ onJump }) {
         <span className="accent">.</span>
       </h1>
       <p className="hero-tagline centered">
-        Aerospace PhD student at MIT — propulsion, autonomous flight, and the AI-driven
-        simulation tools that are starting to change how we design both.
+        Incoming MIT AeroAstro graduate student interested in drones, autonomous flight,
+        AI for science, and aerospace systems that have to work outside the lab.
       </p>
     </div>
   );
@@ -269,7 +269,7 @@ function HeroContentConstellation({ onJump }) {
 function ObservingCard() {
   return (
     <div className="observing-card fade-in delay-1">
-      <div className="observing-tab">★ NOW OBSERVING</div>
+      <div className="observing-tab">★ CURRENT FOCUS</div>
       <div className="observing-row">
         <Constellation
           w={120}
@@ -284,18 +284,18 @@ function ObservingCard() {
           ]}
         />
         <div style={{ flex: 1 }}>
-          <div className="meta">FIELD A · SCRAMJETS</div>
-          <div className="observing-title">Shock train stability under back-pressure noise</div>
+          <div className="meta">SCRAMJET ISOLATORS</div>
+          <div className="observing-title">Back-pressure fluctuations in scramjet isolators</div>
           <div className="observing-blurb">
-            LES with OpenSBLI · in prep for <em>J. Fluid Mech.</em>
+            Large-eddy simulations in OpenSBLI; manuscript in preparation for <em>J. Fluid Mech.</em>
           </div>
         </div>
       </div>
       <div className="observing-stats">
         {[
-          ['RANK', '1 / 75', 'Aero IITM'],
-          ['JEE ADV', 'AIR 156', '150K+'],
-          ['CGPA', '9.88', '/ 10'],
+          ['MIT', 'AeroAstro', 'S.M./Ph.D.'],
+          ['FELLOW', 'NDSEG', '2026'],
+          ['IITM', '1 / 75', 'Aerospace'],
         ].map(([k, v, sub]) => (
           <div key={k} className="stat">
             <div className="stat-key">{k}</div>

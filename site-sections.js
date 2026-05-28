@@ -22,32 +22,36 @@ function About() {
         <div>
           <div className="prose">
             <p>
-              I'm a first-year PhD student at MIT, working with{' '}
+              I'm a first-year PhD student in MIT AeroAstro, working with{' '}
               <span className="accent">Prof. Hamsa Balakrishnan</span> in the DINaMo Group.
-              I was awarded the NDSEG Fellowship by the DoD for graduate studies.
-              I did my undergrad at IIT Madras — B.Tech in Aerospace Engineering, graduated first
-              in my department — with research stints in hypersonic wind tunnels in Bangalore,
-              microflyer fabrication at EPFL, and propulsion at Agnikul Cosmos.
+              I’m supported by the 2026 NDSEG Fellowship from the U.S. Department of Defense.
+              Before MIT, I completed my B.Tech in Aerospace Engineering at IIT Madras,
+              graduating first in my department. My undergraduate research and internships took
+              me through hypersonic wind-tunnel experiments in Bangalore, acoustic microflyer
+              fabrication at EPFL, scramjet isolator simulations at IIT Madras, and propulsion
+              work at Agnikul Cosmos.
             </p>
             <p>
-              Outside of research, I'm drawn to drones and autonomous flight — how they're built,
-              how they're flown, and increasingly, how they're defended against. I'm interested in
-              AI and simulation as tools for aerospace, and in the broader question of what it
-              takes to build things that actually work in the air.
+              I’m still figuring out the exact direction of my PhD. At the moment, I’m drawn to
+              drones and autonomous flight, drone defense, AI for science, and the ways
+              increasingly capable AI systems could change engineering research. I also keep
+              coming back to simulation, real-world testing, and the gap between what works in
+              a model and what works in the air.
             </p>
           </div>
         </div>
 
         <aside className="now-card">
           <div className="now-head accent">☉ CURRENTLY</div>
-          <div className="now-row">→ Cambridge, MA</div>
-          <div className="now-row">→ First year PhD · MIT AeroAstro</div>
-          <div className="now-row">→ Writing up journal manuscripts</div>
-          <div className="now-head accent" style={{ marginTop: '1.2em' }}>☉ ALWAYS THINKING ABOUT</div>
-          <div className="now-row">→ Why scramjets unstart</div>
-          <div className="now-row">→ Acoustic levitation</div>
-          <div className="now-row">→ Whether we can fly things on Titan</div>
-          <div className="now-row">→ What good drone defense actually looks like</div>
+          <div className="now-row">→ MIT AeroAstro · S.M./Ph.D. track</div>
+          <div className="now-row">→ Graduate researcher · DINaMo Group</div>
+          <div className="now-row">→ 2026 NDSEG Fellow</div>
+          <div className="now-row">→ Writing up scramjet and microflyer manuscripts</div>
+          <div className="now-head accent" style={{ marginTop: '1.2em' }}>☉ INTERESTS</div>
+          <div className="now-row">→ High-speed flows, CFD, and propulsion</div>
+          <div className="now-row">→ Drones, autonomy, and defense systems</div>
+          <div className="now-row">→ AI for science and engineering design</div>
+          <div className="now-row">→ Simulation, testing, and real-world deployment</div>
         </aside>
       </div>
     </section>
@@ -194,16 +198,16 @@ function Projects({ headless = false }) {
 
 function Awards({ headless = false }) {
   const awards = [
-    ['2026', 'NDSEG Fellowship', 'DoD graduate research fellowship', 'USA'],
-    ['2026', 'Prof E G Tulapurkara Prize', 'Best academic performance · third year aerospace', 'IIT Madras'],
-    ['2026', 'Jane Street Poker Bots · 3rd Place', 'IIT Madras–Jane Street competition', 'Chennai'],
-    ['2025', 'UN Millennium Fellowship', 'HydroChurn sustainability work', 'Global'],
-    ['2025', 'Prof T K Varadan Prize', 'Best aerospace second-year student', 'IIT Madras'],
-    ['2024', 'Sri S Subramanian Prize', 'Top of class of 1500+', 'IIT Madras'],
-    ['2024', 'James Dyson Award · Runner-Up', 'India national recognition for HydroChurn', 'India'],
-    ['2024', 'Airbus Flight Challenge · 1st RU', 'Shaastra IIT Madras competition', 'Chennai'],
-    ['2024', 'IAS Summer Research Fellowship', 'Summer research fellowship at IISc', 'Bangalore'],
-    ['2021', 'KVPY Fellowship', 'DST, Government of India · AIR 239', 'India'],
+    ['2026', 'NDSEG Fellowship', 'U.S. Department of Defense graduate research fellowship', 'USA'],
+    ['2026', 'Prof E G Tulapurkara Prize', 'Best academic performance in third-year aerospace engineering', 'IIT Madras'],
+    ['2026', 'Jane Street Poker Bots · 3rd Place', 'Designed and developed a bot for a custom poker variant', 'IIT Madras'],
+    ['2025', 'UN Millennium Fellowship', 'Selected to further develop HydroChurn as a sustainability project', 'Global'],
+    ['2025', 'Prof T K Varadan Prize', 'Best academic performance in second-year aerospace engineering', 'IIT Madras'],
+    ['2024', 'Sri S Subramanian Prize', 'Highest first-year CGPA among 1500+ B.Tech students', 'IIT Madras'],
+    ['2024', 'James Dyson Award · Runner-Up', 'National runner-up in India for HydroChurn, a self-sustaining water bottle', 'India'],
+    ['2024', 'Airbus Flight Challenge · First Runner-Up', 'Shaastra competition on aircraft braking dynamics and prediction', 'IIT Madras'],
+    ['2024', 'IAS Summer Research Fellowship', 'Fully funded summer research fellowship at IISc Bangalore', 'Bangalore'],
+    ['2021', 'KVPY Fellowship', 'Department of Science and Technology fellowship · AIR 239', 'India'],
   ];
   return (
     <section id="awards" className="sect sect-bg fade-in">
@@ -236,10 +240,8 @@ function Awards({ headless = false }) {
 function Contact({ headless = false }) {
   const channels = [
     ['EMAIL', 'ashwinm [at] mit.edu', 'mailto:ashwinm@mit.edu'],
-    ['SCHOLAR', 'scholar profile', null],
     ['GITHUB', '↗ /ashwin-murugan', 'https://github.com/ashwin-murugan'],
     ['LINKEDIN', '↗ /in/ashwin-murugan', 'https://www.linkedin.com/in/ashwin-murugan'],
-    ['TWITTER', '↗ @ashwinflies', 'https://x.com/ashwinflies'],
     ['CV', '↗ download pdf', 'uploads/Ashwin___Research_CV___MIT.pdf'],
   ];
   return (
